@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<!--
+ *
+ *	Copyright (c) 2014 Thomas Mayo-Smith
+ *	www.github/generalmayo
+ *  version 1.3.0	
+ *
+ *	Dual licensed under the MIT and GPL licenses.
+ *	http://en.wikipedia.org/wiki/MIT_License
+ *	http://en.wikipedia.org/wiki/GNU_General_Public_License
+ */
+-->
+<head>
+ <link href="css/bootstrap.css" rel="stylesheet">
+<!-- Other styles -->
+<style type="text/css">
+button{color:white; background:#6f99c8;}
+
+</style>
+
+</head>
+
+<body>
+<span class="span">	
+<h1>Traffic Simulator</h1>
+
+<div id ="canvascontainer"><canvas id ="canvas" width ="700" height="300" style="border:1px solid #000000;">
+></div>
+<br/>
+<br/>
+<button type="button" onclick="init()">Start/Pause</button>
+<button type="button" onclick="reset=true">RESET</button><br/>
+<br/>
+
+Speed Scaling Factor <input type="text" id="speedScaleVal" maxlength="10" value = "3000" style="width:60px">
+<br/>
+<br/>
+<br/>
+<hr>
+<h3>Description</h3>
+Experiment simulating the effects of driver curiosity on traffic patterns and congestion. Pertains to traffic conditions such as "rubber-necking" arising from external driver distraction that may affect driver behavior but does not physically restrict road/lane capacity.
+<br/>
+<br/>
+<h3>Assumptions:</h3>
+<br/>
+<li/>the closer the driver gets to the crash sight the quicker
+   her curiostity will get satisfied
+<li/> 	the more curious the the driver is the longer it will take 
+	   to satisfy her curiosity
+<li/>	the faster the driver is going the slower her curiosity
+	    will be fulfilled
+	
+<br/>
+<br/>
+Ci = tu*dc     <br/>
+Cj = .5*tu + (tu^2)*dc	<br/>
+
+where tu = time unit and dc = change in curiosity, Ci = .5 and Cj = 580
+<hr>
+	
+	
+</span>
+Version 1.3.0
+Copyright (c) 2014 Thomas Mayo-Smith<br/>
+www.github/generalmayo</br>
+Dual licensed under the MIT and GPL licenses.
+
+<script src="js/trafficsim.js"></script>
+</body>
+</html>
